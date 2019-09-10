@@ -212,3 +212,10 @@ library(ggplot2)
 ggplot(sum, aes(Fuel, PM25),color=cluster) + geom_point()
 typeof()
 sum$cluster<-as.character(sum$cluster)
+
+##随机扰动项的序列相关检验dwtest(res)、异方差性检验bptest(result2), 解释变量的多重共线性检验car包求的vif等； 
+library(lmtest)
+dwtest(mod1)
+library(car)
+bptest(mod6)
+vif(mod6)
