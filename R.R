@@ -1,5 +1,8 @@
 rm(list=ls())
 
+##aggregate by id
+aggregate(. ~Output, data=X111, sum, na.rm=TRUE)
+
 ##wide table to long table
 library(reshape2)
 long <- melt(fuel, id.vars = c("X__1", "Country"))
